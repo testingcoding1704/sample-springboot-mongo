@@ -33,7 +33,7 @@ import static org.assertj.core.api.Assertions.assertThat;
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class SampleMongoApplicationTests {
+public class SampleMongoApplicationIT {
 
 	@Autowired
 	private InitializeCustomersRestController initializeCustomersRestController;
@@ -43,7 +43,7 @@ public class SampleMongoApplicationTests {
 	@Test
 	public void testDefaultSettings() {
 		initializeCustomersRestController.populateCustomersToMongo();
-		String output = SampleMongoApplicationTests.outputCapture.toString();
+		String output = SampleMongoApplicationIT.outputCapture.toString();
 		assertThat(output).contains("firstName='Alice', lastName='Smith'");
 	}
 

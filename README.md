@@ -5,9 +5,14 @@ The content initially was taken from:
 
 
 
-Run tests
----------
-SampleMongoApplicationTests, then verify mongo db
+Run Integration tests
+---------------------
+*Please note, that integration tests require local mongo up and running.*
+
+To run integration tests can execute either:
+* From IDE SampleMongoApplicationIT, then verify mongo db
+* `mvn clean package verify -DskipITs=false`
+
 ```
 mongo
 db.customer.find().pretty();
