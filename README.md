@@ -23,6 +23,7 @@ To run
 ------
 * SampleMongoApplication main class
 * `mvn clean package spring-boot:run`
+* `mvn clean package && cd target && java -jar sample-springboot-mongo-0.1-SNAPSHOT.jar`
 
 
 To verify
@@ -33,8 +34,8 @@ db.customer.find().pretty();
 db.customer.remove({});
 db.customer.find().pretty();
 
+curl http://localhost:8080/helloworld
 curl http://localhost:8080
 curl http://localhost:8080/init
 curl http://localhost:8080
-curl http://localhost:8080/helloworld
 ```
